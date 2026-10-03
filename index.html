@@ -1,147 +1,2131 @@
 <!DOCTYPE html>
 
-<html lang="es"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html lang="es">
 
-<title>Laura Climent | Junior Backend & Full Stack Developer</title>
+<head>
 
-<style> body{ font-family:system-ui,-apple-system,sans-serif; margin:0; background:#f4f6fb; color:#1a1a1a; line-height:1.6; } header{ background:linear-gradient(135deg,#020617,#0f172a); color:white; padding:80px 20px; text-align:center; } header h1{ margin:0; font-size:44px; letter-spacing:-1px; } header p{ opacity:.9; font-size:18px; } .lang{ position:absolute; top:20px; right:25px; } .lang button{ background:transparent; border:1px solid rgba(255,255,255,.4); color:white; padding:7px 12px; border-radius:8px; cursor:pointer; margin-left:5px; } .lang button:hover{ background:rgba(255,255,255,.1); } .btn{ display:inline-block; margin-top:20px; padding:12px 24px; background:#3b82f6; color:white; border-radius:10px; font-weight:600; text-decoration:none; transition:.2s; } .btn:hover{ background:#2563eb; transform:translateY(-2px); } section{ max-width:950px; margin:35px auto; background:white; padding:40px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.05); } h2{ margin-top:0; } .project{ border:1px solid #eef0f4; padding:24px; border-radius:14px; margin-bottom:20px; transition:.25s; } .project:hover{ transform:translateY(-6px); box-shadow:0 12px 26px rgba(0,0,0,.08); } .stack{ margin-top:12px; } .stack span{ display:inline-block; background:#eef2ff; color:#3730a3; padding:6px 12px; margin:5px; border-radius:8px; font-size:13px; font-weight:600; } .tech span{ display:inline-block; background:#e6f0ff; padding:7px 14px; margin:6px; border-radius:8px; font-size:14px; } .links{ margin-top:15px; } .links a{ margin-right:15px; color:#2563eb; font-weight:600; text-decoration:none; } .links a:hover{ text-decoration:underline; } footer{ text-align:center; padding:40px; font-size:14px; color:#555; } @media(max-width:700px){ header h1{ font-size:34px; } section{ margin:20px 12px; padding:25px; } .lang{ position:static; margin-bottom:25px; } } </style>
+  <meta charset="UTF-8" />
+
+<meta
+ name="viewport"
+ content="width=device-width, initial-scale=1.0"
+/>
+
+  <title>
+    Laura Climent | Junior Backend & Full Stack Developer
+  </title>
+
+<meta
+ name="description"
+ content="Portfolio de Laura Climent, Junior Backend & Full Stack Developer especializada en Java, Spring Boot, PostgreSQL, React y Next.js."
+/>
+
+  <style>
+
+    /* =========================
+       VARIABLES DE DISEÑO
+    ========================= */
+
+    :root {
+      --navy-950: #020617;
+      --navy-900: #0f172a;
+      --navy-800: #172033;
+
+      --blue-600: #2563eb;
+      --blue-500: #3b82f6;
+      --blue-100: #dbeafe;
+
+      --green-500: #22c55e;
+      --green-100: #dcfce7;
+
+      --slate-900: #0f172a;
+      --slate-700: #334155;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+
+      --gray-100: #f1f5f9;
+      --gray-50: #f8fafc;
+
+      --white: #ffffff;
+
+      --border: #e2e8f0;
+
+      --shadow-sm:
+        0 4px 15px rgba(15, 23, 42, 0.05);
+
+      --shadow-md:
+        0 15px 35px rgba(15, 23, 42, 0.08);
+
+      --shadow-lg:
+        0 25px 60px rgba(15, 23, 42, 0.12);
+    }
+
+
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background:
+        linear-gradient(
+          180deg,
+          #f8fafc 0%,
+          #eef2f7 100%
+        );
+
+      color: var(--slate-900);
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background:
+        rgba(2, 6, 23, 0.92);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding:
+        14px 24px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+    .logo {
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      letter-spacing: -0.5px;
+
+      font-size: 17px;
+    }
+
+    .logo span {
+      color: var(--blue-500);
+    }
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+
+    /* =========================
+       LANGUAGE
+    ========================= */
+
+    .lang {
+      display: flex;
+
+      gap: 5px;
+    }
+
+    .lang button {
+      background: transparent;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+      color: #cbd5e1;
+
+      padding: 5px 9px;
+
+      border-radius: 7px;
+
+      cursor: pointer;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      transition: 0.2s;
+    }
+
+    .lang button:hover {
+      border-color: var(--blue-500);
+
+      color: white;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(37, 99, 235, 0.20),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(34, 197, 94, 0.10),
+          transparent 25%
+        ),
+
+        linear-gradient(
+          135deg,
+          var(--navy-950),
+          var(--navy-900)
+        );
+
+      color: white;
+
+      padding:
+        95px 24px 100px;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.5fr
+        1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding:
+        7px 12px;
+
+      border:
+        1px solid rgba(59, 130, 246, 0.3);
+
+      background:
+        rgba(59, 130, 246, 0.10);
+
+      color: #93c5fd;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--green-500);
+
+      box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.12);
+    }
+
+    .hero h1 {
+      margin: 0;
+
+      font-size:
+        clamp(42px, 6vw, 68px);
+
+      line-height: 1.02;
+
+      letter-spacing: -2.5px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero-subtitle {
+      margin-top: 25px;
+
+      color: #cbd5e1;
+
+      font-size: 19px;
+
+      max-width: 650px;
+    }
+
+    .hero-stack {
+      margin-top: 20px;
+
+      color: #94a3b8;
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      padding:
+        12px 20px;
+
+      border-radius: 10px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--blue-500);
+
+      color: white;
+
+      box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-600);
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 25px
+        rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-secondary {
+      background:
+        rgba(255, 255, 255, 0.05);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background:
+        rgba(255, 255, 255, 0.10);
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* =========================
+       HERO CARD
+    ========================= */
+
+    .hero-card {
+      background:
+        rgba(255, 255, 255, 0.05);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+      border-radius: 20px;
+
+      padding: 25px;
+
+      box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.20);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card-header {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 9px;
+
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: #475569;
+    }
+
+    .dot.active {
+      background:
+        var(--green-500);
+
+      box-shadow:
+        0 0 10px
+        rgba(34, 197, 94, 0.6);
+    }
+
+    .code-line {
+      font-family:
+        "Courier New",
+        monospace;
+
+      color: #94a3b8;
+
+      font-size: 13px;
+
+      margin: 10px 0;
+    }
+
+    .code-key {
+      color: #60a5fa;
+    }
+
+    .code-value {
+      color: #86efac;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding:
+        60px 24px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-header {
+      margin-bottom: 25px;
+    }
+
+    .section-label {
+      color: var(--blue-600);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+    }
+
+    h2 {
+      margin:
+        5px 0 0;
+
+      font-size: 30px;
+
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      color: var(--slate-500);
+
+      max-width: 700px;
+
+      margin-top: 8px;
+    }
+
+
+    /* =========================
+       FEATURED PROJECT
+    ========================= */
+
+    .featured {
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f8fafc
+        );
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: 35px;
+
+      box-shadow: var(--shadow-md);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .featured::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      top: 0;
+
+      bottom: 0;
+
+      width: 5px;
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--blue-500),
+          var(--green-500)
+        );
+    }
+
+    .featured-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-start;
+
+      gap: 20px;
+    }
+
+    .featured h3 {
+      margin:
+        0 0 10px;
+
+      font-size: 24px;
+    }
+
+    .status {
+      white-space: nowrap;
+
+      background:
+        var(--green-100);
+
+      color:
+        #166534;
+
+      padding:
+        6px 10px;
+
+      border-radius: 999px;
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+    .featured-description {
+      color: var(--slate-700);
+
+      max-width: 800px;
+    }
+
+    .feature-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 25px;
+
+      margin-top: 25px;
+    }
+
+    .feature-box {
+      background: var(--gray-50);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 18px;
+    }
+
+    .feature-box h4 {
+      margin:
+        0 0 10px;
+
+      font-size: 14px;
+    }
+
+    .feature-box ul {
+      margin: 0;
+
+      padding-left: 20px;
+
+      color: var(--slate-600);
+    }
+
+    .feature-box li {
+      margin-bottom: 5px;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-card {
+      display: grid;
+
+      grid-template-columns:
+        180px 1fr;
+
+      gap: 35px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 30px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .experience-company {
+      color: var(--blue-600);
+
+      font-weight: 800;
+
+      font-size: 15px;
+    }
+
+    .experience-date {
+      color: var(--slate-400);
+
+      font-size: 13px;
+
+      margin-top: 5px;
+    }
+
+    .experience-card h3 {
+      margin:
+        0 0 8px;
+
+      font-size: 21px;
+    }
+
+    .experience-card p {
+      color: var(--slate-700);
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+
+      color: var(--slate-700);
+    }
+
+    .experience-card li {
+      margin-bottom: 7px;
+    }
+
+
+    /* =========================
+       PROJECT GRID
+    ========================= */
+
+    .projects-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .project-card {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      padding: 24px;
+
+      box-shadow: var(--shadow-sm);
+
+      transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+    }
+
+    .project-card:hover {
+      transform:
+        translateY(-5px);
+
+      box-shadow: var(--shadow-md);
+
+      border-color:
+        #bfdbfe;
+    }
+
+    .project-icon {
+      width: 42px;
+
+      height: 42px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background:
+        var(--blue-100);
+
+      border-radius: 10px;
+
+      margin-bottom: 18px;
+    }
+
+    .project-card h3 {
+      margin:
+        0 0 10px;
+
+      font-size: 18px;
+    }
+
+    .project-card p {
+      color: var(--slate-500);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       TECH STACK
+    ========================= */
+
+    .tech-layout {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .tech-group {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      padding: 22px;
+    }
+
+    .tech-group h3 {
+      margin:
+        0 0 15px;
+
+      font-size: 16px;
+    }
+
+    .tech {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+    }
+
+    .tech span,
+    .stack span {
+      display: inline-block;
+
+      padding:
+        6px 10px;
+
+      border-radius: 7px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+    .tech span {
+      background:
+        #f1f5f9;
+
+      color:
+        var(--slate-700);
+
+      border:
+        1px solid #e2e8f0;
+    }
+
+    .stack {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 18px;
+    }
+
+    .stack span {
+      background:
+        #eff6ff;
+
+      color:
+        #1d4ed8;
+
+      border:
+        1px solid #dbeafe;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background:
+        var(--navy-900);
+
+      color: white;
+
+      border-radius: 20px;
+
+      padding: 38px;
+
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about .section-label {
+      color: #60a5fa;
+    }
+
+    .about h2 {
+      color: white;
+    }
+
+    .about p {
+      color: #cbd5e1;
+
+      max-width: 850px;
+    }
+
+    .about-highlight {
+      margin-top: 25px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 12px;
+    }
+
+    .highlight {
+      padding: 15px;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.04);
+
+      border-radius: 10px;
+    }
+
+    .highlight strong {
+      display: block;
+
+      color: white;
+
+      font-size: 14px;
+    }
+
+    .highlight span {
+      color: #94a3b8;
+
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      text-align: center;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: 45px 25px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      color: var(--slate-500);
+
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background:
+        var(--navy-950);
+
+      color:
+        #94a3b8;
+
+      text-align: center;
+
+      padding:
+        35px 20px;
+
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        display: none;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tech-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .about-highlight {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .hero {
+        padding:
+          70px 20px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-subtitle {
+        font-size: 17px;
+      }
+
+      main {
+        padding:
+          45px 16px;
+      }
+
+      .featured {
+        padding: 25px;
+      }
+
+      .featured-top {
+        flex-direction: column;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+      }
+
+      .about {
+        padding: 28px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<header>
+  <!-- =========================
+       NAVBAR
+  ========================= -->
 
-<div class="lang"> <button onclick="setLanguage('es')">ES</button> <button onclick="setLanguage('en')">EN</button> </div>
+  <nav class="navbar">
 
-<h1>Laura Climent</h1>
+```
+<div class="nav-container">
 
-<p id="subtitle"> Junior Backend & Full Stack Developer<br> Java · Spring Boot · PostgreSQL · React · Next.js </p>
+  <a
+    class="logo"
+    href="#top"
+  >
+    Laura<span>.</span>
+  </a>
 
-<a class="btn" href="https://github.com/laclipi" target="_blank"> <span id="githubBtn">Ver GitHub</span> </a>
+  <div class="nav-links">
 
-<br><br>
+    <a
+      href="#experience"
+      id="navExperience"
+    >
+      Experiencia
+    </a>
 
-<a class="btn" href="mailto:clipilaura@gmail.com"> <span id="contactBtn">Contactar</span> </a>
+    <a
+      href="#projects"
+      id="navProjects"
+    >
+      Proyectos
+    </a>
 
-</header>
+    <a
+      href="#stack"
+      id="navStack"
+    >
+      Stack
+    </a>
 
-<!-- ACTUALMENTE CONSTRUYENDO -->
+    <a
+      href="#about"
+      id="navAbout"
+    >
+      Sobre mí
+    </a>
+
+    <a
+      href="#contact"
+      id="navContact"
+    >
+      Contacto
+    </a>
+
+  </div>
+
+  <div class="lang">
+
+    <button
+      onclick="setLanguage('es')"
+    >
+      ES
+    </button>
+
+    <button
+      onclick="setLanguage('en')"
+    >
+      EN
+    </button>
+
+  </div>
+
+</div>
+```
+
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero">
+
+```
+<div class="hero-container">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Disponible para oportunidades Junior
+    </div>
+
+    <h1>
+      Laura
+      <span>Climent</span>
+    </h1>
+
+    <p
+      class="hero-subtitle"
+      id="subtitle"
+    >
+      Junior Backend & Full Stack Developer
+    </p>
+
+    <p class="hero-stack">
+      Java · Spring Boot · PostgreSQL · React · Next.js
+    </p>
+
+    <div class="hero-actions">
+
+      <a
+        class="btn btn-primary"
+        href="https://github.com/laclipi"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="https://www.linkedin.com/in/laura-climent-pi/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="mailto:clipilaura@gmail.com"
+        id="contactBtn"
+      >
+        Contactar
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- Mini tarjeta técnica -->
+
+  <div class="hero-card">
+
+    <div class="hero-card-header">
+
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+
+    </div>
+
+    <div class="code-line">
+      <span class="code-key">developer</span>:
+      <span class="code-value">"Laura Climent"</span>
+    </div>
+
+    <div class="code-line">
+      <span class="code-key">focus</span>:
+      <span class="code-value">"Backend"</span>
+    </div>
+
+    <div class="code-line">
+      <span class="code-key">backend</span>:
+      <span class="code-value">"Java / Spring Boot"</span>
+    </div>
+
+    <div class="code-line">
+      <span class="code-key">database</span>:
+      <span class="code-value">"PostgreSQL"</span>
+    </div>
+
+    <div class="code-line">
+      <span class="code-key">frontend</span>:
+      <span class="code-value">"React / Next.js"</span>
+    </div>
+
+    <div class="code-line">
+      <span class="code-key">learning</span>:
+      <span class="code-value">"SaaS architecture"</span>
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </header>
+
+  <main>
+
+```
+<!-- =========================
+     FEATURED PROJECT
+========================= -->
 
 <section>
 
-<h2 id="buildingTitle">Actualmente construyendo</h2>
+  <div class="section-header">
 
-<div class="project">
+    <div class="section-label">
+      Featured project
+    </div>
 
-<h3>🏗️ Klastr — SaaS Multi-Tenant</h3>
+    <h2 id="buildingTitle">
+      Actualmente construyendo
+    </h2>
 
-<p id="klastrDescription"> Plataforma SaaS diseñada para gestionar múltiples organizaciones, con autenticación segura, aislamiento de datos por tenant y una arquitectura backend basada en Spring Boot. </p>
+    <p class="section-intro">
+      Un proyecto donde estoy aplicando progresivamente conceptos de backend, seguridad, persistencia y arquitectura.
+    </p>
 
-<ul id="klastrList"> <li>Diseño de arquitectura backend</li> <li>Spring Security y control de acceso</li> <li>Modelado y persistencia con PostgreSQL</li> <li>APIs REST</li> <li>Arquitectura multi-tenant</li> <li>Docker</li> </ul>
+  </div>
 
-<p> <strong id="klastrStrong"> Proyecto de aprendizaje avanzado orientado a prácticas de desarrollo profesional. </strong> </p>
 
-<a class="btn" href="https://github.com/laclipi/klastr_backend" target="_blank">
-<span id="repoBtn">Ver repositorio</span>
-</a>
+  <div class="featured">
 
-</div>
+    <div class="featured-top">
+
+      <div>
+
+        <h3>
+          🏗️ Klastr — SaaS Multi-Tenant
+        </h3>
+
+        <p
+          class="featured-description"
+          id="klastrDescription"
+        >
+          Plataforma SaaS diseñada para gestionar múltiples organizaciones,
+          con autenticación segura, aislamiento de datos por tenant y una
+          arquitectura backend basada en Spring Boot.
+        </p>
+
+      </div>
+
+      <span class="status">
+        En desarrollo
+      </span>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+      <div class="feature-box">
+
+        <h4>
+          Backend
+        </h4>
+
+        <ul>
+
+          <li>
+            Spring Boot
+          </li>
+
+          <li>
+            Spring Security
+          </li>
+
+          <li>
+            APIs REST
+          </li>
+
+          <li>
+            PostgreSQL
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="feature-box">
+
+        <h4>
+          Arquitectura
+        </h4>
+
+        <ul>
+
+          <li>
+            Multi-tenant
+          </li>
+
+          <li>
+            Control de acceso
+          </li>
+
+          <li>
+            Persistencia de datos
+          </li>
+
+          <li>
+            Docker
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="stack">
+
+      <span>Java</span>
+      <span>Spring Boot</span>
+      <span>Spring Security</span>
+      <span>PostgreSQL</span>
+      <span>REST</span>
+      <span>Docker</span>
+
+    </div>
+
+
+    <div style="margin-top:25px">
+
+      <a
+        class="btn btn-primary"
+        href="https://github.com/laclipi/klastr_backend"
+        target="_blank"
+        rel="noopener"
+      >
+        <span id="repoBtn">
+          Ver repositorio
+        </span>
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
-<!-- EXPERIENCIA -->
 
-<section>
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
-<h2 id="experienceTitle">Experiencia</h2>
+<section
+  id="experience"
+>
 
-<div class="project">
+  <div class="section-header">
 
-<h3>Jelpus — Developer Jr Full Stack</h3>
+    <div class="section-label">
+      Experience
+    </div>
 
-<p id="jelpusDescription"> Experiencia práctica desarrollando funcionalidades para una aplicación web real, trabajando con tecnologías modernas de frontend, integración de APIs y flujo de desarrollo mediante Git y Pull Requests. </p>
+    <h2 id="experienceTitle">
+      Experiencia
+    </h2>
 
-<ul id="jelpusList"> <li>Next.js, React y TypeScript</li> <li>Tailwind CSS</li> <li>Integración con APIs y servicios externos</li> <li>Git y GitHub</li> <li>Debugging y resolución de errores</li> <li>Gestión de estados asíncronos y polling</li> <li>Desarrollo de un MVP de generación de vídeo mediante APIs de IA</li> </ul>
+  </div>
 
-</div>
+
+  <div class="experience-card">
+
+    <div>
+
+      <div class="experience-company">
+        Jelpus
+      </div>
+
+      <div class="experience-date">
+        Developer Jr Full Stack
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Desarrollo de funcionalidades para una aplicación web real
+      </h3>
+
+      <p id="jelpusDescription">
+        Experiencia práctica desarrollando funcionalidades para una aplicación
+        web real, trabajando con tecnologías modernas de frontend,
+        integración de APIs y flujo de desarrollo mediante Git y Pull Requests.
+      </p>
+
+      <ul>
+
+        <li>
+          Next.js, React y TypeScript
+        </li>
+
+        <li>
+          Tailwind CSS
+        </li>
+
+        <li>
+          Integración con APIs y servicios externos
+        </li>
+
+        <li>
+          Git, GitHub y Pull Requests
+        </li>
+
+        <li>
+          Debugging y resolución de errores
+        </li>
+
+        <li>
+          Gestión de estados asíncronos y polling
+        </li>
+
+        <li>
+          MVP de generación de vídeo mediante APIs de IA
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
 
 </section>
 
-<!-- PROYECTOS -->
 
-<section>
+<!-- =========================
+     PROJECTS
+========================= -->
 
-<h2 id="projectsTitle">Proyectos destacados</h2>
+<section
+  id="projects"
+>
 
-<div class="project">
+  <div class="section-header">
 
-<h3>Task Manager —  Practice</h3>
+    <div class="section-label">
+      Projects
+    </div>
 
-<p id="taskDescription"> Aplicación fullstack desarrollada como práctica de pruebas técnicas para procesos de selección Junior. </p>
+    <h2 id="projectsTitle">
+      Proyectos destacados
+    </h2>
 
-<div class="stack"> <span>Java</span> <span>Spring Boot</span> <span>Spring Security</span> <span>JWT</span> <span>JPA</span> <span>React</span> <span>TypeScript</span> </div>
+    <p class="section-intro">
+      Proyectos utilizados para practicar diferentes tecnologías y conceptos de desarrollo.
+    </p>
 
-<div class="links"> <a href="https://github.com/laclipi/kata-take-home" target="_blank"> <span id="taskRepo">Ver repositorio</span> </a> </div>
+  </div>
 
-</div>
 
-<div class="project">
+  <div class="projects-grid">
 
-<h3>Sistema de Gestión de Ventas</h3>
 
-<p id="salesDescription"> Aplicación fullstack para la gestión de productos, clientes y facturación, incluyendo API REST y persistencia de datos. </p>
+    <!-- TASK MANAGER -->
 
-<div class="stack"> <span>Node.js</span> <span>Express</span> <span>MySQL</span> <span>REST API</span> </div>
+    <article class="project-card">
 
-</div>
+      <div class="project-icon">
+        ☕
+      </div>
 
-<div class="project">
+      <h3>
+        Task Manager
+      </h3>
 
-<h3>Sistema de Biblioteca Web</h3>
+      <p id="taskDescription">
+        Aplicación fullstack desarrollada como práctica de pruebas técnicas
+        para procesos de selección Junior.
+      </p>
 
-<p id="libraryDescription"> Aplicación basada en programación orientada a objetos para la gestión de préstamos y usuarios. </p>
+      <div class="stack">
 
-<div class="stack"> <span>JavaScript</span> <span>OOP</span> <span>HTML</span> <span>CSS</span> </div>
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>JWT</span>
+        <span>JPA</span>
+        <span>React</span>
 
-</div>
+      </div>
+
+      <div style="margin-top:20px">
+
+        <a
+          class="btn btn-secondary"
+          style="
+            color:#2563eb;
+            border-color:#dbeafe;
+            background:#eff6ff;
+          "
+          href="https://github.com/laclipi/kata-take-home"
+          target="_blank"
+          rel="noopener"
+        >
+          <span id="taskRepo">
+            Ver repositorio
+          </span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- SALES -->
+
+    <article class="project-card">
+
+      <div class="project-icon">
+        📊
+      </div>
+
+      <h3>
+        Sistema de Gestión de Ventas
+      </h3>
+
+      <p id="salesDescription">
+        Aplicación fullstack para la gestión de productos,
+        clientes y facturación, incluyendo API REST y persistencia de datos.
+      </p>
+
+      <div class="stack">
+
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>MySQL</span>
+        <span>REST API</span>
+
+      </div>
+
+    </article>
+
+
+    <!-- LIBRARY -->
+
+    <article class="project-card">
+
+      <div class="project-icon">
+        📚
+      </div>
+
+      <h3>
+        Sistema de Biblioteca Web
+      </h3>
+
+      <p id="libraryDescription">
+        Aplicación basada en programación orientada a objetos
+        para la gestión de préstamos y usuarios.
+      </p>
+
+      <div class="stack">
+
+        <span>JavaScript</span>
+        <span>OOP</span>
+        <span>HTML</span>
+        <span>CSS</span>
+
+      </div>
+
+    </article>
+
+
+  </div>
 
 </section>
 
-<!-- SOBRE MI -->
 
-<section>
+<!-- =========================
+     STACK
+========================= -->
 
-<h2 id="aboutTitle">Sobre mí</h2>
+<section
+  id="stack"
+>
 
-<p id="aboutText1"> Soy desarrolladora Junior con especial interés en backend y arquitectura de aplicaciones. Mi experiencia práctica me ha permitido trabajar tanto en frontend como en backend y entender cómo se conectan las diferentes capas de una aplicación. </p>
+  <div class="section-header">
 
-<p id="aboutText2"> Actualmente estoy profundizando especialmente en Java, Spring Boot, Spring Security, PostgreSQL, REST APIs y arquitectura SaaS. </p>
+    <div class="section-label">
+      Technical stack
+    </div>
 
-<p id="aboutText3"> Busco incorporarme a un equipo de ingeniería donde pueda aportar desde el primer día, aprender de desarrolladores con experiencia y seguir creciendo como desarrolladora Backend / Full Stack. </p>
+    <h2 id="techTitle">
+      Tecnologías
+    </h2>
+
+  </div>
+
+
+  <div class="tech-layout">
+
+
+    <div class="tech-group">
+
+      <h3>
+        Backend
+      </h3>
+
+      <div class="tech">
+
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Spring Security</span>
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>REST APIs</span>
+        <span>JWT</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="tech-group">
+
+      <h3>
+        Database & Persistence
+      </h3>
+
+      <div class="tech">
+
+        <span>PostgreSQL</span>
+        <span>MySQL</span>
+        <span>JPA</span>
+        <span>Hibernate</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="tech-group">
+
+      <h3>
+        Frontend
+      </h3>
+
+      <div class="tech">
+
+        <span>React</span>
+        <span>Next.js</span>
+        <span>TypeScript</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Tailwind CSS</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="tech-group">
+
+      <h3>
+        Tools & Workflow
+      </h3>
+
+      <div class="tech">
+
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Docker</span>
+        <span>Pull Requests</span>
+        <span>Debugging</span>
+
+      </div>
+
+    </div>
+
+
+  </div>
 
 </section>
 
-<!-- TECNOLOGIAS -->
 
-<section>
+<!-- =========================
+     ABOUT
+========================= -->
 
-<h2 id="techTitle">Tecnologías</h2>
+<section
+  id="about"
+  class="about"
+>
 
-<div class="tech"> <span>Java</span> <span>Spring Boot</span> <span>Spring Security</span> <span>PostgreSQL</span> <span>Docker</span> <span>Node.js</span> <span>Express</span> <span>React</span> <span>Next.js</span> <span>TypeScript</span> <span>JavaScript</span> <span>Git</span> <span>REST APIs</span> <span>JWT</span> <span>JPA / Hibernate</span> </div>
+  <div class="section-label">
+    About me
+  </div>
+
+  <h2 id="aboutTitle">
+    Sobre mí
+  </h2>
+
+  <p id="aboutText1">
+    Soy desarrolladora Junior con especial interés en backend y
+    arquitectura de aplicaciones. Mi experiencia práctica me ha permitido
+    trabajar tanto en frontend como en backend y entender cómo se conectan
+    las diferentes capas de una aplicación.
+  </p>
+
+  <p id="aboutText2">
+    Actualmente estoy profundizando especialmente en Java,
+    Spring Boot, Spring Security, PostgreSQL, REST APIs y arquitectura SaaS.
+  </p>
+
+  <p id="aboutText3">
+    Busco incorporarme a un equipo de ingeniería donde pueda aportar
+    desde el primer día, aprender de desarrolladores con experiencia
+    y seguir creciendo como desarrolladora Backend / Full Stack.
+  </p>
+
+
+  <div class="about-highlight">
+
+    <div class="highlight">
+
+      <strong>
+        Backend-focused
+      </strong>
+
+      <span>
+        Java · Spring Boot · REST
+      </span>
+
+    </div>
+
+
+    <div class="highlight">
+
+      <strong>
+        Full Stack
+      </strong>
+
+      <span>
+        React · Next.js · TypeScript
+      </span>
+
+    </div>
+
+
+    <div class="highlight">
+
+      <strong>
+        Learning mindset
+      </strong>
+
+      <span>
+        SaaS · Security · Architecture
+      </span>
+
+    </div>
+
+  </div>
 
 </section>
 
-<!-- FOOTER -->
 
-<footer>
+<!-- =========================
+     CONTACT
+========================= -->
 
-<p> 📩 <strong>clipilaura@gmail.com</strong> </p>
+<section
+  id="contact"
+  class="contact"
+>
 
-<p id="footerText"> Barcelona · Disponible para oportunidades Junior Backend / Full Stack </p>
+  <div class="section-label">
+    Contact
+  </div>
 
-</footer>
+  <h2>
+    ¿Hablamos?
+  </h2>
 
-<script> const translations = { es: { subtitle:"Junior Backend & Full Stack Developer<br>Java · Spring Boot · PostgreSQL · React · Next.js", github:"Ver GitHub", contact:"Contactar", building:"Actualmente construyendo", klastrDescription:"Plataforma SaaS diseñada para gestionar múltiples organizaciones, con autenticación segura, aislamiento de datos por tenant y una arquitectura backend basada en Spring Boot.", klastrStrong:"Proyecto de aprendizaje avanzado orientado a prácticas de desarrollo profesional.", repo:"Ver repositorio", experience:"Experiencia", jelpusDescription:"Experiencia práctica desarrollando funcionalidades para una aplicación web real, trabajando con tecnologías modernas de frontend, integración de APIs y flujo de desarrollo mediante Git y Pull Requests.", projects:"Proyectos destacados", taskDescription:"Aplicación fullstack desarrollada como práctica de pruebas técnicas para procesos de selección Junior.", taskRepo:"Ver repositorio", salesDescription:"Aplicación fullstack para la gestión de productos, clientes y facturación, incluyendo API REST y persistencia de datos.", libraryDescription:"Aplicación basada en programación orientada a objetos para la gestión de préstamos y usuarios.", about:"Sobre mí", about1:"Soy desarrolladora Junior con especial interés en backend y arquitectura de aplicaciones. Mi experiencia práctica me ha permitido trabajar tanto en frontend como en backend y entender cómo se conectan las diferentes capas de una aplicación.", about2:"Actualmente estoy profundizando especialmente en Java, Spring Boot, Spring Security, PostgreSQL, REST APIs y arquitectura SaaS.", about3:"Busco incorporarme a un equipo de ingeniería donde pueda aportar desde el primer día, aprender de desarrolladores con experiencia y seguir creciendo como desarrolladora Backend / Full Stack.", tech:"Tecnologías", footer:"Barcelona · Disponible para oportunidades Junior Backend / Full Stack" }, en: { subtitle:"Junior Backend & Full Stack Developer<br>Java · Spring Boot · PostgreSQL · React · Next.js", github:"View GitHub", contact:"Contact", building:"Currently building", klastrDescription:"SaaS platform designed to support multiple organizations, with secure authentication, tenant data isolation and a Spring Boot-based backend architecture.", klastrStrong:"Advanced learning project focused on professional software development practices.", repo:"View repository", experience:"Experience", jelpusDescription:"Hands-on experience developing features for a real web application, working with modern frontend technologies, API integrations and a Git-based development workflow.", projects:"Featured projects", taskDescription:"Full-stack application developed as technical interview practice for Junior software development positions.", taskRepo:"View repository", salesDescription:"Full-stack application for managing products, customers and billing, including a REST API and data persistence.", libraryDescription:"Object-oriented web application for managing users and book loans.", about:"About me", about1:"I’m a Junior Developer with a strong interest in backend development and application architecture. My hands-on experience has allowed me to work across both frontend and backend and understand how the different layers of an application connect.", about2:"I’m currently deepening my knowledge of Java, Spring Boot, Spring Security, PostgreSQL, REST APIs and SaaS architecture.", about3:"I’m looking to join an engineering team where I can contribute from day one, learn from experienced developers and continue growing as a Backend / Full Stack Developer.", tech:"Technologies", footer:"Barcelona · Open to Junior Backend / Full Stack opportunities" } }; function setLanguage(language){ const t=translations[language]; document.documentElement.lang=language; document.getElementById("subtitle").innerHTML=t.subtitle; document.getElementById("githubBtn").textContent=t.github; document.getElementById("contactBtn").textContent=t.contact; document.getElementById("buildingTitle").textContent=t.building; document.getElementById("klastrDescription").textContent=t.klastrDescription; document.getElementById("klastrStrong").textContent=t.klastrStrong; document.getElementById("repoBtn").textContent=t.repo; document.getElementById("experienceTitle").textContent=t.experience; document.getElementById("jelpusDescription").textContent=t.jelpusDescription; document.getElementById("projectsTitle").textContent=t.projects; document.getElementById("taskDescription").textContent=t.taskDescription; document.getElementById("taskRepo").textContent=t.taskRepo; document.getElementById("salesDescription").textContent=t.salesDescription; document.getElementById("libraryDescription").textContent=t.libraryDescription; document.getElementById("aboutTitle").textContent=t.about; document.getElementById("aboutText1").textContent=t.about1; document.getElementById("aboutText2").textContent=t.about2; document.getElementById("aboutText3").textContent=t.about3; document.getElementById("techTitle").textContent=t.tech; document.getElementById("footerText").textContent=t.footer; localStorage.setItem("language",language); } const savedLanguage=localStorage.getItem("language") || "es"; setLanguage(savedLanguage); </script>
+  <p>
+    Estoy buscando una oportunidad Junior Backend / Full Stack
+    donde pueda seguir creciendo y aportar al equipo.
+  </p>
 
-</body> </html>
+  <div class="hero-actions"
+       style="justify-content:center">
+
+    <a
+      class="btn btn-primary"
+      href="mailto:clipilaura@gmail.com"
+    >
+      📩 clipilaura@gmail.com
+    </a>
+
+    <a
+      class="btn btn-secondary"
+      style="
+        color:#0f172a;
+        border-color:#e2e8f0;
+      "
+      href="https://www.linkedin.com/in/laura-climent-pi/"
+      target="_blank"
+      rel="noopener"
+    >
+      LinkedIn
+    </a>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+```
+<p>
+  © 2026 Laura Climent
+</p>
+
+<p id="footerText">
+  Barcelona · Disponible para oportunidades Junior Backend / Full Stack
+</p>
+
+<p>
+  <strong>
+    Java · Spring Boot · React · Next.js
+  </strong>
+</p>
+```
+
+  </footer>
+
+  <!-- =========================
+       LANGUAGE SYSTEM
+  ========================= -->
+
+  <script>
+
+    const translations = {
+
+      es: {
+
+        subtitle:
+          "Junior Backend & Full Stack Developer",
+
+        contact:
+          "Contactar",
+
+        building:
+          "Actualmente construyendo",
+
+        experience:
+          "Experiencia",
+
+        projects:
+          "Proyectos destacados",
+
+        taskDescription:
+          "Aplicación fullstack desarrollada como práctica de pruebas técnicas para procesos de selección Junior.",
+
+        taskRepo:
+          "Ver repositorio",
+
+        salesDescription:
+          "Aplicación fullstack para la gestión de productos, clientes y facturación, incluyendo API REST y persistencia de datos.",
+
+        libraryDescription:
+          "Aplicación basada en programación orientada a objetos para la gestión de préstamos y usuarios.",
+
+        about:
+          "Sobre mí",
+
+        about1:
+          "Soy desarrolladora Junior con especial interés en backend y arquitectura de aplicaciones. Mi experiencia práctica me ha permitido trabajar tanto en frontend como en backend y entender cómo se conectan las diferentes capas de una aplicación.",
+
+        about2:
+          "Actualmente estoy profundizando especialmente en Java, Spring Boot, Spring Security, PostgreSQL, REST APIs y arquitectura SaaS.",
+
+        about3:
+          "Busco incorporarme a un equipo de ingeniería donde pueda aportar desde el primer día, aprender de desarrolladores con experiencia y seguir creciendo como desarrolladora Backend / Full Stack.",
+
+        tech:
+          "Tecnologías",
+
+        footer:
+          "Barcelona · Disponible para oportunidades Junior Backend / Full Stack"
+
+      },
+
+
+      en: {
+
+        subtitle:
+          "Junior Backend & Full Stack Developer",
+
+        contact:
+          "Contact",
+
+        building:
+          "Currently building",
+
+        experience:
+          "Experience",
+
+        projects:
+          "Featured projects",
+
+        taskDescription:
+          "Full-stack application developed as technical interview practice for Junior software development positions.",
+
+        taskRepo:
+          "View repository",
+
+        salesDescription:
+          "Full-stack application for managing products, customers and billing, including a REST API and data persistence.",
+
+        libraryDescription:
+          "Object-oriented web application for managing users and book loans.",
+
+        about:
+          "About me",
+
+        about1:
+          "I’m a Junior Developer with a strong interest in backend development and application architecture. My hands-on experience has allowed me to work across both frontend and backend and understand how the different layers of an application connect.",
+
+        about2:
+          "I’m currently deepening my knowledge of Java, Spring Boot, Spring Security, PostgreSQL, REST APIs and SaaS architecture.",
+
+        about3:
+          "I’m looking to join an engineering team where I can contribute from day one, learn from experienced developers and continue growing as a Backend / Full Stack Developer.",
+
+        tech:
+          "Technologies",
+
+        footer:
+          "Barcelona · Open to Junior Backend / Full Stack opportunities"
+
+      }
+
+    };
+
+
+    function setLanguage(language) {
+
+      const t = translations[language];
+
+      document.documentElement.lang = language;
+
+      document.getElementById("subtitle").textContent =
+        t.subtitle;
+
+      document.getElementById("contactBtn").textContent =
+        t.contact;
+
+      document.getElementById("buildingTitle").textContent =
+        t.building;
+
+      document.getElementById("experienceTitle").textContent =
+        t.experience;
+
+      document.getElementById("projectsTitle").textContent =
+        t.projects;
+
+      document.getElementById("taskDescription").textContent =
+        t.taskDescription;
+
+      document.getElementById("taskRepo").textContent =
+        t.taskRepo;
+
+      document.getElementById("salesDescription").textContent =
+        t.salesDescription;
+
+      document.getElementById("libraryDescription").textContent =
+        t.libraryDescription;
+
+      document.getElementById("aboutTitle").textContent =
+        t.about;
+
+      document.getElementById("aboutText1").textContent =
+        t.about1;
+
+      document.getElementById("aboutText2").textContent =
+        t.about2;
+
+      document.getElementById("aboutText3").textContent =
+        t.about3;
+
+      document.getElementById("techTitle").textContent =
+        t.tech;
+
+      document.getElementById("footerText").textContent =
+        t.footer;
+
+      localStorage.setItem(
+        "language",
+        language
+      );
+
+    }
+
+
+    const savedLanguage =
+      localStorage.getItem("language") || "es";
+
+    setLanguage(savedLanguage);
+
+  </script>
+
+</body>
+
+</html>
