@@ -1,289 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Laura Climent | Backend Developer</title>
+<html lang="es"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<style>
+<title>Laura Climent | Junior Backend & Full Stack Developer</title>
 
-body{
-font-family: system-ui, -apple-system, sans-serif;
-margin:0;
-background:#f4f6fb;
-color:#1a1a1a;
-}
+<style> body{ font-family:system-ui,-apple-system,sans-serif; margin:0; background:#f4f6fb; color:#1a1a1a; line-height:1.6; } header{ background:linear-gradient(135deg,#020617,#0f172a); color:white; padding:80px 20px; text-align:center; } header h1{ margin:0; font-size:44px; letter-spacing:-1px; } header p{ opacity:.9; font-size:18px; } .lang{ position:absolute; top:20px; right:25px; } .lang button{ background:transparent; border:1px solid rgba(255,255,255,.4); color:white; padding:7px 12px; border-radius:8px; cursor:pointer; margin-left:5px; } .lang button:hover{ background:rgba(255,255,255,.1); } .btn{ display:inline-block; margin-top:20px; padding:12px 24px; background:#3b82f6; color:white; border-radius:10px; font-weight:600; text-decoration:none; transition:.2s; } .btn:hover{ background:#2563eb; transform:translateY(-2px); } section{ max-width:950px; margin:35px auto; background:white; padding:40px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.05); } h2{ margin-top:0; } .project{ border:1px solid #eef0f4; padding:24px; border-radius:14px; margin-bottom:20px; transition:.25s; } .project:hover{ transform:translateY(-6px); box-shadow:0 12px 26px rgba(0,0,0,.08); } .stack{ margin-top:12px; } .stack span{ display:inline-block; background:#eef2ff; color:#3730a3; padding:6px 12px; margin:5px; border-radius:8px; font-size:13px; font-weight:600; } .tech span{ display:inline-block; background:#e6f0ff; padding:7px 14px; margin:6px; border-radius:8px; font-size:14px; } .links{ margin-top:15px; } .links a{ margin-right:15px; color:#2563eb; font-weight:600; text-decoration:none; } .links a:hover{ text-decoration:underline; } footer{ text-align:center; padding:40px; font-size:14px; color:#555; } @media(max-width:700px){ header h1{ font-size:34px; } section{ margin:20px 12px; padding:25px; } .lang{ position:static; margin-bottom:25px; } } </style>
 
-/* HEADER */
-
-header{
-background:linear-gradient(135deg,#020617,#0f172a);
-color:white;
-padding:80px 20px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:44px;
-letter-spacing:-1px;
-}
-
-header p{
-opacity:.9;
-font-size:18px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 24px;
-background:#3b82f6;
-color:white;
-border-radius:10px;
-font-weight:600;
-transition:.2s;
-}
-
-.btn:hover{
-background:#2563eb;
-transform:translateY(-2px);
-}
-
-/* SECTIONS */
-
-section{
-max-width:950px;
-margin:35px auto;
-background:white;
-padding:40px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-h2{
-margin-top:0;
-}
-
-/* PROJECTS */
-
-.project{
-border:1px solid #eef0f4;
-padding:24px;
-border-radius:14px;
-margin-bottom:20px;
-transition:.25s;
-}
-
-.project:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 26px rgba(0,0,0,.08);
-}
-
-.stack{
-margin-top:12px;
-}
-
-.stack span{
-display:inline-block;
-background:#eef2ff;
-color:#3730a3;
-padding:6px 12px;
-margin:5px;
-border-radius:8px;
-font-size:13px;
-font-weight:600;
-}
-
-/* TECH */
-
-.tech span{
-display:inline-block;
-background:#e6f0ff;
-padding:7px 14px;
-margin:6px;
-border-radius:8px;
-font-size:14px;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-font-size:14px;
-color:#555;
-}
-
-</style>
 </head>
 
 <body>
 
 <header>
 
+<div class="lang"> <button onclick="setLanguage('es')">ES</button> <button onclick="setLanguage('en')">EN</button> </div>
+
 <h1>Laura Climent</h1>
 
-<p>
-Backend Developer | Java · Spring Boot · PostgreSQL<br>
-Especializada en arquitectura SaaS y diseño de APIs
-</p>
+<p id="subtitle"> Junior Backend & Full Stack Developer<br> Java · Spring Boot · PostgreSQL · React · Next.js </p>
 
-<a class="btn" href="https://github.com/laclipi" target="_blank">
-Ver GitHub
-</a>
+<a class="btn" href="https://github.com/laclipi" target="_blank"> <span id="githubBtn">Ver GitHub</span> </a>
 
 <br><br>
 
-<a class="btn" href="mailto:clipilaura@gmail.com">
-Contactar
-</a>
+<a class="btn" href="mailto:clipilaura@gmail.com"> <span id="contactBtn">Contactar</span> </a>
 
 </header>
-
-
 
 <!-- ACTUALMENTE CONSTRUYENDO -->
 
 <section>
 
-<h2>Actualmente construyendo</h2>
+<h2 id="buildingTitle">Actualmente construyendo</h2>
 
 <div class="project">
 
-<h3>🏗️ Klastr — SaaS Multi-Tenant en arquitectura real</h3>
+<h3>🏗️ Klastr — SaaS Multi-Tenant</h3>
 
-<p>
-Estoy diseñando y desarrollando una plataforma SaaS preparada para soportar múltiples organizaciones,
-con autenticación segura, aislamiento de datos por tenant y una arquitectura escalable basada en Spring Boot.
-</p>
+<p id="klastrDescription"> Plataforma SaaS diseñada para gestionar múltiples organizaciones, con autenticación segura, aislamiento de datos por tenant y una arquitectura backend basada en Spring Boot. </p>
 
-<ul>
-<li>Diseño de arquitectura backend</li>
-<li>Spring Security y control de acceso</li>
-<li>Modelado avanzado de base de datos</li>
-<li>APIs REST robustas</li>
-<li>Clean Architecture</li>
-</ul>
+<ul id="klastrList"> <li>Diseño de arquitectura backend</li> <li>Spring Security y control de acceso</li> <li>Modelado y persistencia con PostgreSQL</li> <li>APIs REST</li> <li>Arquitectura multi-tenant</li> <li>Docker</li> </ul>
 
-<p><strong>Proyecto diseñado siguiendo estándares de software profesional.</strong></p>
+<p> <strong id="klastrStrong"> Proyecto de aprendizaje avanzado orientado a prácticas de desarrollo profesional. </strong> </p>
 
-<a class="btn"
-href="https://github.com/laclipi/klastr_backend"
-target="_blank">
-Ver repositorio
+<a class="btn" href="https://github.com/laclipi/klastr_backend" target="_blank">
+<span id="repoBtn">Ver repositorio</span>
 </a>
 
 </div>
 
 </section>
 
+<!-- EXPERIENCIA -->
 
+<section>
+
+<h2 id="experienceTitle">Experiencia</h2>
+
+<div class="project">
+
+<h3>Jelpus — Developer Jr Full Stack</h3>
+
+<p id="jelpusDescription"> Experiencia práctica desarrollando funcionalidades para una aplicación web real, trabajando con tecnologías modernas de frontend, integración de APIs y flujo de desarrollo mediante Git y Pull Requests. </p>
+
+<ul id="jelpusList"> <li>Next.js, React y TypeScript</li> <li>Tailwind CSS</li> <li>Integración con APIs y servicios externos</li> <li>Git y GitHub</li> <li>Debugging y resolución de errores</li> <li>Gestión de estados asíncronos y polling</li> <li>Desarrollo de un MVP de generación de vídeo mediante APIs de IA</li> </ul>
+
+</div>
+
+</section>
 
 <!-- PROYECTOS -->
 
 <section>
 
-<h2>Proyectos Destacados</h2>
+<h2 id="projectsTitle">Proyectos destacados</h2>
+
+<div class="project">
+
+<h3>Task Manager —  Practice</h3>
+
+<p id="taskDescription"> Aplicación fullstack desarrollada como práctica de pruebas técnicas para procesos de selección Junior. </p>
+
+<div class="stack"> <span>Java</span> <span>Spring Boot</span> <span>Spring Security</span> <span>JWT</span> <span>JPA</span> <span>React</span> <span>TypeScript</span> </div>
+
+<div class="links"> <a href="https://github.com/laclipi/kata-take-home" target="_blank"> <span id="taskRepo">Ver repositorio</span> </a> </div>
+
+</div>
 
 <div class="project">
 
 <h3>Sistema de Gestión de Ventas</h3>
 
-<p>
-Aplicación fullstack para la gestión de productos, clientes y facturación,
-incluyendo API REST y persistencia de datos.
-</p>
+<p id="salesDescription"> Aplicación fullstack para la gestión de productos, clientes y facturación, incluyendo API REST y persistencia de datos. </p>
 
-<div class="stack">
-<span>Node.js</span>
-<span>Express</span>
-<span>MySQL</span>
-<span>REST API</span>
-</div>
+<div class="stack"> <span>Node.js</span> <span>Express</span> <span>MySQL</span> <span>REST API</span> </div>
 
 </div>
-
-
 
 <div class="project">
 
 <h3>Sistema de Biblioteca Web</h3>
 
-<p>
-Aplicación basada en programación orientada a objetos para la gestión
-de préstamos y usuarios.
-</p>
+<p id="libraryDescription"> Aplicación basada en programación orientada a objetos para la gestión de préstamos y usuarios. </p>
 
-<div class="stack">
-<span>JavaScript</span>
-<span>OOP</span>
-<span>HTML</span>
-<span>CSS</span>
-</div>
+<div class="stack"> <span>JavaScript</span> <span>OOP</span> <span>HTML</span> <span>CSS</span> </div>
 
 </div>
 
 </section>
-
-
 
 <!-- SOBRE MI -->
 
 <section>
 
-<h2>Sobre mí</h2>
+<h2 id="aboutTitle">Sobre mí</h2>
 
-<p>
-Desarrolladora enfocada en backend y arquitectura de aplicaciones.
-Actualmente construyo <strong>plataformas SaaS reales</strong> aplicando buenas prácticas,
-clean architecture y diseño de APIs.
-</p>
+<p id="aboutText1"> Soy desarrolladora Junior con especial interés en backend y arquitectura de aplicaciones. Mi experiencia práctica me ha permitido trabajar tanto en frontend como en backend y entender cómo se conectan las diferentes capas de una aplicación. </p>
 
-<p>
-Preparada para incorporarme a un equipo de ingeniería donde aportar
-solidez backend, pensamiento arquitectónico y alta capacidad de crecimiento.
-</p>
+<p id="aboutText2"> Actualmente estoy profundizando especialmente en Java, Spring Boot, Spring Security, PostgreSQL, REST APIs y arquitectura SaaS. </p>
+
+<p id="aboutText3"> Busco incorporarme a un equipo de ingeniería donde pueda aportar desde el primer día, aprender de desarrolladores con experiencia y seguir creciendo como desarrolladora Backend / Full Stack. </p>
 
 </section>
-
-
 
 <!-- TECNOLOGIAS -->
 
 <section>
 
-<h2>Tecnologías</h2>
+<h2 id="techTitle">Tecnologías</h2>
 
-<div class="tech">
-<span>Java</span>
-<span>Spring Boot</span>
-<span>Spring Security</span>
-<span>PostgreSQL</span>
-<span>Docker</span>
-<span>Node.js</span>
-<span>React</span>
-<span>Next.js</span>
-<span>Git</span>
-<span>REST APIs</span>
-</div>
+<div class="tech"> <span>Java</span> <span>Spring Boot</span> <span>Spring Security</span> <span>PostgreSQL</span> <span>Docker</span> <span>Node.js</span> <span>Express</span> <span>React</span> <span>Next.js</span> <span>TypeScript</span> <span>JavaScript</span> <span>Git</span> <span>REST APIs</span> <span>JWT</span> <span>JPA / Hibernate</span> </div>
 
 </section>
 
-
+<!-- FOOTER -->
 
 <footer>
 
-<p>
-📩 <strong>clipilaura@gmail.com</strong>
-</p>
+<p> 📩 <strong>clipilaura@gmail.com</strong> </p>
 
-<p>
-Barcelona · Disponible para oportunidades backend
-</p>
+<p id="footerText"> Barcelona · Disponible para oportunidades Junior Backend / Full Stack </p>
 
 </footer>
 
-</body>
-</html>
+<script> const translations = { es: { subtitle:"Junior Backend & Full Stack Developer<br>Java · Spring Boot · PostgreSQL · React · Next.js", github:"Ver GitHub", contact:"Contactar", building:"Actualmente construyendo", klastrDescription:"Plataforma SaaS diseñada para gestionar múltiples organizaciones, con autenticación segura, aislamiento de datos por tenant y una arquitectura backend basada en Spring Boot.", klastrStrong:"Proyecto de aprendizaje avanzado orientado a prácticas de desarrollo profesional.", repo:"Ver repositorio", experience:"Experiencia", jelpusDescription:"Experiencia práctica desarrollando funcionalidades para una aplicación web real, trabajando con tecnologías modernas de frontend, integración de APIs y flujo de desarrollo mediante Git y Pull Requests.", projects:"Proyectos destacados", taskDescription:"Aplicación fullstack desarrollada como práctica de pruebas técnicas para procesos de selección Junior.", taskRepo:"Ver repositorio", salesDescription:"Aplicación fullstack para la gestión de productos, clientes y facturación, incluyendo API REST y persistencia de datos.", libraryDescription:"Aplicación basada en programación orientada a objetos para la gestión de préstamos y usuarios.", about:"Sobre mí", about1:"Soy desarrolladora Junior con especial interés en backend y arquitectura de aplicaciones. Mi experiencia práctica me ha permitido trabajar tanto en frontend como en backend y entender cómo se conectan las diferentes capas de una aplicación.", about2:"Actualmente estoy profundizando especialmente en Java, Spring Boot, Spring Security, PostgreSQL, REST APIs y arquitectura SaaS.", about3:"Busco incorporarme a un equipo de ingeniería donde pueda aportar desde el primer día, aprender de desarrolladores con experiencia y seguir creciendo como desarrolladora Backend / Full Stack.", tech:"Tecnologías", footer:"Barcelona · Disponible para oportunidades Junior Backend / Full Stack" }, en: { subtitle:"Junior Backend & Full Stack Developer<br>Java · Spring Boot · PostgreSQL · React · Next.js", github:"View GitHub", contact:"Contact", building:"Currently building", klastrDescription:"SaaS platform designed to support multiple organizations, with secure authentication, tenant data isolation and a Spring Boot-based backend architecture.", klastrStrong:"Advanced learning project focused on professional software development practices.", repo:"View repository", experience:"Experience", jelpusDescription:"Hands-on experience developing features for a real web application, working with modern frontend technologies, API integrations and a Git-based development workflow.", projects:"Featured projects", taskDescription:"Full-stack application developed as technical interview practice for Junior software development positions.", taskRepo:"View repository", salesDescription:"Full-stack application for managing products, customers and billing, including a REST API and data persistence.", libraryDescription:"Object-oriented web application for managing users and book loans.", about:"About me", about1:"I’m a Junior Developer with a strong interest in backend development and application architecture. My hands-on experience has allowed me to work across both frontend and backend and understand how the different layers of an application connect.", about2:"I’m currently deepening my knowledge of Java, Spring Boot, Spring Security, PostgreSQL, REST APIs and SaaS architecture.", about3:"I’m looking to join an engineering team where I can contribute from day one, learn from experienced developers and continue growing as a Backend / Full Stack Developer.", tech:"Technologies", footer:"Barcelona · Open to Junior Backend / Full Stack opportunities" } }; function setLanguage(language){ const t=translations[language]; document.documentElement.lang=language; document.getElementById("subtitle").innerHTML=t.subtitle; document.getElementById("githubBtn").textContent=t.github; document.getElementById("contactBtn").textContent=t.contact; document.getElementById("buildingTitle").textContent=t.building; document.getElementById("klastrDescription").textContent=t.klastrDescription; document.getElementById("klastrStrong").textContent=t.klastrStrong; document.getElementById("repoBtn").textContent=t.repo; document.getElementById("experienceTitle").textContent=t.experience; document.getElementById("jelpusDescription").textContent=t.jelpusDescription; document.getElementById("projectsTitle").textContent=t.projects; document.getElementById("taskDescription").textContent=t.taskDescription; document.getElementById("taskRepo").textContent=t.taskRepo; document.getElementById("salesDescription").textContent=t.salesDescription; document.getElementById("libraryDescription").textContent=t.libraryDescription; document.getElementById("aboutTitle").textContent=t.about; document.getElementById("aboutText1").textContent=t.about1; document.getElementById("aboutText2").textContent=t.about2; document.getElementById("aboutText3").textContent=t.about3; document.getElementById("techTitle").textContent=t.tech; document.getElementById("footerText").textContent=t.footer; localStorage.setItem("language",language); } const savedLanguage=localStorage.getItem("language") || "es"; setLanguage(savedLanguage); </script>
+
+</body> </html>
