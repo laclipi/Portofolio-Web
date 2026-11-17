@@ -1608,7 +1608,7 @@
             border-color:#dbeafe;
             background:#eff6ff;
           "
-          href="https://github.com/laclipi/kata-take-home"
+          href="https://github.com/laclipi/Task-Manager"
           target="_blank"
           rel="noopener"
         >
@@ -1622,58 +1622,67 @@
     </article>
 
 
-    <!-- SALES -->
+    <!-- CHATBOT IA / RAG -->
 
     <article class="project-card">
 
       <div class="project-icon">
-        📊
+        🤖
       </div>
 
       <h3>
-        Sistema de Gestión de Ventas
+        Chatbot IA / RAG
       </h3>
 
-      <p id="salesDescription">
-        Aplicación fullstack para la gestión de productos,
-        clientes y facturación, incluyendo API REST y persistencia de datos.
+      <p id="chatbotDescription">
+        Aplicación web para que negocios gestionen sus servicios y consulten su propia documentación mediante un asistente de IA con RAG. Incluye gestión de negocios y servicios, procesamiento de documentos y respuestas con referencias a las fuentes. Proyecto en desarrollo: la calidad de la recuperación semántica y la fiabilidad de las respuestas siguen en mejora.
       </p>
 
       <div class="stack">
 
-        <span>Node.js</span>
-        <span>Express</span>
-        <span>MySQL</span>
-        <span>REST API</span>
+        <span>Java 21</span>
+        <span>Spring Boot</span>
+        <span>PostgreSQL</span>
+        <span>pgvector</span>
+        <span>Ollama</span>
+        <span>Next.js</span>
+        <span>TypeScript</span>
 
       </div>
 
-    </article>
+      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px">
 
+        <a
+          class="btn btn-secondary"
+          style="
+            color:#2563eb;
+            border-color:#dbeafe;
+            background:#eff6ff;
+          "
+          href="https://github.com/laclipi/Show-case-Chatbot-ia-RAG"
+          target="_blank"
+          rel="noopener"
+        >
+          <span id="chatbotShowcase">
+            Ver Showcase
+          </span>
+        </a>
 
-    <!-- LIBRARY -->
-
-    <article class="project-card">
-
-      <div class="project-icon">
-        📚
-      </div>
-
-      <h3>
-        Sistema de Biblioteca Web
-      </h3>
-
-      <p id="libraryDescription">
-        Aplicación basada en programación orientada a objetos
-        para la gestión de préstamos y usuarios.
-      </p>
-
-      <div class="stack">
-
-        <span>JavaScript</span>
-        <span>OOP</span>
-        <span>HTML</span>
-        <span>CSS</span>
+        <a
+          class="btn btn-secondary"
+          style="
+            color:#2563eb;
+            border-color:#dbeafe;
+            background:#eff6ff;
+          "
+          href="https://www.loom.com/share/37ba23832ebd41e688d65f797c998cde"
+          target="_blank"
+          rel="noopener"
+        >
+          <span id="chatbotDemo">
+            Ver demo
+          </span>
+        </a>
 
       </div>
 
@@ -1981,11 +1990,14 @@
         taskRepo:
           "Ver repositorio",
 
-        salesDescription:
-          "Aplicación fullstack para la gestión de productos, clientes y facturación, incluyendo API REST y persistencia de datos.",
+        chatbotDescription:
+          "Aplicación web para que negocios gestionen sus servicios y consulten su propia documentación mediante un asistente de IA con RAG. Incluye gestión de negocios y servicios, procesamiento de documentos y respuestas con referencias a las fuentes. Proyecto en desarrollo: la calidad de la recuperación semántica y la fiabilidad de las respuestas siguen en mejora.",
 
-        libraryDescription:
-          "Aplicación basada en programación orientada a objetos para la gestión de préstamos y usuarios.",
+        chatbotShowcase:
+          "Ver Showcase",
+
+        chatbotDemo:
+          "Ver demo",
 
         about:
           "Sobre mí",
@@ -2031,11 +2043,14 @@
         taskRepo:
           "View repository",
 
-        salesDescription:
-          "Full-stack application for managing products, customers and billing, including a REST API and data persistence.",
+        chatbotDescription:
+          "Web application that lets businesses manage their services and query their own documentation through an AI assistant using RAG. It includes business and service management, document processing and answers with references to the sources. Project in development: the quality of semantic retrieval and the reliability of the answers are still being improved.",
 
-        libraryDescription:
-          "Object-oriented web application for managing users and book loans.",
+        chatbotShowcase:
+          "View Showcase",
+
+        chatbotDemo:
+          "Watch demo",
 
         about:
           "About me",
@@ -2087,11 +2102,14 @@
       document.getElementById("taskRepo").textContent =
         t.taskRepo;
 
-      document.getElementById("salesDescription").textContent =
-        t.salesDescription;
+      document.getElementById("chatbotDescription").textContent =
+        t.chatbotDescription;
 
-      document.getElementById("libraryDescription").textContent =
-        t.libraryDescription;
+      document.getElementById("chatbotShowcase").textContent =
+        t.chatbotShowcase;
+
+      document.getElementById("chatbotDemo").textContent =
+        t.chatbotDemo;
 
       document.getElementById("aboutTitle").textContent =
         t.about;
